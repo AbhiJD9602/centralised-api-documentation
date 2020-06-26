@@ -1,0 +1,5 @@
+rootProject.name = 'centralised-api-documentation'
+include 'person-application'
+include 'employee-application'
+include 'eureka-swagger-server'
+

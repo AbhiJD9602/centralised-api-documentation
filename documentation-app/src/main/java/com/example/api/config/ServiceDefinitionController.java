@@ -5,12 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * <pre>
  *  Controller to serve the JSON from our in-memory store. So that UI can render the API-Documentation
  * </pre>
  */
+@ApiIgnore
 @RestController
 public class ServiceDefinitionController {
 

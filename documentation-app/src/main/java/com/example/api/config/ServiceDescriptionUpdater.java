@@ -1,7 +1,5 @@
 package com.example.api.config;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,10 +53,10 @@ public class ServiceDescriptionUpdater {
                 String swaggerURL = getSwaggerURL(instance);
                 logger.info("Swagger Url:- ", swaggerURL);
 
-                Optional<Object> jsonData = getSwaggerDefinitionForAPI(serviceId, swaggerURL);
+                Optional<String> jsonData = getSwaggerDefinitionForAPI(serviceId, swaggerURL);
 
                 if (jsonData.isPresent()) {
-                    String content = getJSON(serviceId, jsonData.get());
+                    String content = jsonData.get();
                     definitionContext.addServiceDefinition(serviceId, content);
                 } else {
                     logger.error("Skipping service id : {} Error : Could not get Swagger definition from API ", serviceId);
@@ -74,10 +72,10 @@ public class ServiceDescriptionUpdater {
         return swaggerURL != null ? instance.getUri() + swaggerURL : instance.getUri() + DEFAULT_SWAGGER_URL;
     }
 
-    private Optional<Object> getSwaggerDefinitionForAPI(String serviceName, String url) {
+    private Optional<String> getSwaggerDefinitionForAPI(String serviceName, String url) {
         logger.debug("Accessing the SwaggerDefinition JSON for Service : {} : URL : {} ", serviceName, url);
         try {
-            Object jsonData = template.getForObject(url, Object.class);
+            String jsonData = template.getForObject(url, String.class);
             return Optional.of(jsonData);
         } catch (RestClientException ex) {
             logger.error("Error while getting service definition for service : {} Error : {} ", serviceName, ex.getMessage());
@@ -86,12 +84,4 @@ public class ServiceDescriptionUpdater {
 
     }
 
-    public String getJSON(String serviceId, Object jsonData) {
-        try {
-            return new ObjectMapper().writeValueAsString(jsonData);
-        } catch (JsonProcessingException e) {
-            logger.error("Error : {} ", e.getMessage());
-            return "";
-        }
-    }
 }

@@ -17,6 +17,8 @@ spring:
       path: /db-console
   application:
     name: person-application
+  profiles:
+    include: swagger-eureka
 
 logging:
   level:
@@ -26,6 +28,8 @@ logging:
 eureka:
   instance:
     appname: person-application
+    metadata-map:
+      swagger_url: http://localhost:9091
   client:
     enabled: true
     register-with-eureka: true

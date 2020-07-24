@@ -1,11 +1,13 @@
-package com.example.api.config;
+package com.example.api.server.controller;
 
 
+import com.example.api.server.service.ServiceDefinitionsContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * <pre>
@@ -19,9 +21,9 @@ public class ServiceDefinitionController {
     private ServiceDefinitionsContext definitionContext;
 
     @GetMapping("/service/{servicename}")
-    public String getServiceDefinition(@PathVariable("servicename") String serviceName) {
+    public String getServiceDefinition(@PathVariable("servicename") String serviceName, @RequestHeader(name = HttpHeaders.AUTHORIZATION, required = false) String token) {
 
-        return definitionContext.getSwaggerDefinition(serviceName);
+        return definitionContext.getSwaggerDefinition(serviceName, token);
 
     }
 }

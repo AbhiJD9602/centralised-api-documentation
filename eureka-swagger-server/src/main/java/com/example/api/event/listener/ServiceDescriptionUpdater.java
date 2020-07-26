@@ -1,5 +1,6 @@
-package com.example.api.config;
+package com.example.api.event.listener;
 
+import com.example.api.service.ServiceDefinitionsContext;
 import com.netflix.appinfo.InstanceInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,11 +4,11 @@ spring:
 
 server:
   port: 8761
+
 logging:
   level:
     com.netflix.eureka: false
     com.netflix.discovery: false
-
 
 eureka:
   client:
@@ -16,7 +16,3 @@ eureka:
     register-with-eureka: false
   dashboard:
     path: /eurekawebui
-
-swagger:
-  config:
-    refreshrate: 5000

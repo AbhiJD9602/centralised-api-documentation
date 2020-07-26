@@ -1,5 +1,6 @@
 package com.example.api.config;
 
+import com.example.api.service.ServiceDefinitionsContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

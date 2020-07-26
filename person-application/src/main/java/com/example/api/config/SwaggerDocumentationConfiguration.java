@@ -14,12 +14,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerDocumentationConfiguration {
 
-
     ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Person REST CRUD operations API in Spring-Boot 2")
                 .description(
                         "Sample REST API for centralized documentation using Spring Boot and spring-fox swagger 2 ")
-                .termsOfServiceUrl("").version("0.0.1-SNAPSHOT").contact(new Contact("Team Innovators", "https://github.com", "https://github.com")).build();
+                .termsOfServiceUrl("").version("0.0.1-SNAPSHOT").contact(new Contact("Team Trailblazers", "https://github.com", "https://github.com")).build();
     }
 
     @Bean
@@ -28,6 +27,5 @@ public class SwaggerDocumentationConfiguration {
                 .apis(RequestHandlerSelectors.basePackage("com.example.api.controller")).build()
                 .apiInfo(apiInfo());
     }
-
 
 }

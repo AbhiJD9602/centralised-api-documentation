@@ -28,9 +28,9 @@ public class ServiceDescriptionUpdater {
 
     @EventListener
     public void refreshSwaggerConfigurations(EurekaInstanceRegisteredEvent event) {
-        log.debug("Starting Service Definition Context refresh");
+        log.info("Starting Service Definition Context refresh");
         InstanceInfo instanceInfo = event.getInstanceInfo();
-        log.debug("Attempting service definition refresh for Service : {} ", instanceInfo.getAppName());
+        log.info("Attempting service definition refresh for Service : {} ", instanceInfo.getAppName());
 
         String swaggerUrl = getSwaggerURL(instanceInfo);
         log.info("Swagger Url:- ", swaggerUrl);
@@ -47,7 +47,7 @@ public class ServiceDescriptionUpdater {
     public void refreshSwaggerConfigurations(EurekaInstanceCanceledEvent event) {
         String[] split = event.getServerId().split(":");
         definitionContext.removeServiceDefinition(split[1]);
-        System.out.println("App removed:" + split[1]);
+        log.info("App removed:" + split[1]);
     }
 
 }

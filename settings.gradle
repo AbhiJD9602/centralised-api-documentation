@@ -2,5 +2,7 @@ rootProject.name = 'centralised-api-documentation'
 include 'person-application'
 include 'employee-application'
 include 'eureka-swagger-server'
+include 'eureka-swagger-server-1'
+include 'eureka-swagger-client'
 include 'documentation-app'
 

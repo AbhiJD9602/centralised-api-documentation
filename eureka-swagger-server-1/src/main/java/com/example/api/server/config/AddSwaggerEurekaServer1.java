@@ -12,9 +12,9 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@ComponentScan(basePackages = {"com.example.api.server"})
-@PropertySource("classpath:enable-swagger-eureka-server.properties")
-@EnableEurekaServer
 @EnableSwagger2
-public @interface AddSwaggerEurekaServer {
+@ComponentScan(basePackages = {"com.example.api.server"})
+@PropertySource("classpath:enable-swagger-eureka-server-1.properties")
+@EnableEurekaServer
+public @interface AddSwaggerEurekaServer1 {
 }

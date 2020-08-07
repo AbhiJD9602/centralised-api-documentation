@@ -1,15 +1,12 @@
 package com.example.api.server.event.listener;
 
 import com.example.api.server.service.ServiceDefinitionsContext;
-import com.example.api.utility.Constants;
 import com.netflix.appinfo.InstanceInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.eureka.server.event.EurekaInstanceCanceledEvent;
 import org.springframework.cloud.netflix.eureka.server.event.EurekaInstanceRegisteredEvent;
-import org.springframework.context.annotation.Profile;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +19,6 @@ import java.time.LocalDate;
  */
 @Slf4j
 @Component
-@Profile(Constants.DEACTIVATE_SWAGGER_EUREKA)
 public class ServiceDescriptionUpdater {
 
     private static final String KEY_SWAGGER_URL = "swagger_url";

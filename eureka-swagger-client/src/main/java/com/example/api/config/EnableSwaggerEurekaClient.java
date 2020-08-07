@@ -1,4 +1,4 @@
-package com.example.api.client.config;
+package com.example.api.config;
 
 import org.springframework.context.annotation.Import;
 
@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Import({EnableEurekaClientConfig.class, DisableEurekaClientConfig.class})
-public @interface AddSwaggerEurekaClient {
+@Import({EnableEurekaClientConfig.class,DisableEurekaClientConfig.class})
+public @interface EnableSwaggerEurekaClient {
 }

@@ -1,10 +1,8 @@
 package com.example.api.server.service;
 
-import com.example.api.utility.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -27,7 +25,6 @@ import java.util.stream.Collectors;
  */
 @Slf4j
 @Component
-@Profile(Constants.DEACTIVATE_SWAGGER_EUREKA)
 @Scope(scopeName = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class ServiceDefinitionsContext {
 

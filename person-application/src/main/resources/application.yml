@@ -20,19 +20,14 @@ spring:
   profiles:
     include: swagger-eureka
 
-logging:
-  level:
-    com.netflix.eureka: OFF
-    com.netflix.discovery: OFF
-
 eureka:
   instance:
     appname: person-application
     metadata-map:
       swagger_url: http://localhost:9091
-  client:
-    enabled: true
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /v2/api-docs.json

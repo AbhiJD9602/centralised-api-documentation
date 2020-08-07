@@ -1,11 +1,10 @@
 package com.example.api;
 
-import com.example.api.client.config.AddSwaggerEurekaClient;
+import com.example.api.client.config.EnableSwaggerEurekaClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-@AddSwaggerEurekaClient
+@EnableSwaggerEurekaClient
 @SpringBootApplication
 public class PersonApplication {
 

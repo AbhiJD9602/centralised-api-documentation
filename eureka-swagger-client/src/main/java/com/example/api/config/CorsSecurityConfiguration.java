@@ -1,15 +1,12 @@
-package com.example.api.client.config;
+package com.example.api.config;
 
-import com.example.api.utility.Constants;
 import com.google.common.collect.ImmutableList;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-@Profile(Constants.ACTIVATE_SWAGGER_EUREKA)
 @Configuration
 public class CorsSecurityConfiguration {
 

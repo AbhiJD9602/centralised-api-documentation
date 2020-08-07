@@ -1,4 +1,4 @@
-package com.example.api.client.config;
+package com.example.api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerDocumentationConfiguration {
         return new ApiInfoBuilder().title("Employee REST CRUD operations API in Spring-Boot 2")
                 .description(
                         "Sample REST API for centralized documentation using Spring Boot and spring-fox swagger 2 ")
-                .termsOfServiceUrl("").version("0.0.1-SNAPSHOT").contact(new Contact("Team Innovators", "https://github.com", "https://github.com")).build();
+                .termsOfServiceUrl("").version("0.0.1-SNAPSHOT").contact(new Contact("Team Trailblazers", "https://github.com", "https://github.com")).build();
     }
 
     @Bean

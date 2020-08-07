@@ -1,13 +1,10 @@
 package com.example.api.server.config;
 
 import com.example.api.server.service.ServiceDefinitionsContext;
-import com.example.api.utility.Constants;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
 import org.springframework.web.client.RestTemplate;
 import springfox.documentation.swagger.web.InMemorySwaggerResourcesProvider;
 import springfox.documentation.swagger.web.SwaggerResource;
@@ -23,12 +20,11 @@ import java.util.List;
  *   read data from in-memory context
  * </pre>
  */
-@Profile(Constants.DEACTIVATE_SWAGGER_EUREKA)
 @Configuration
 public class SwaggerUIConfiguration {
 
     @Bean
-    public RestTemplate configureTemplate() {
+    public RestTemplate template() {
         return new RestTemplate();
     }
 

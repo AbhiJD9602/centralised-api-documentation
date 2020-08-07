@@ -1,5 +1,12 @@
 dependencies {
-    compile project(":eureka-swagger-server")
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:+'
+    compile 'io.springfox:springfox-swagger2:2.9.2'
+    compile 'io.springfox:springfox-swagger-ui:2.9.2'
     compileOnly 'org.projectlombok:lombok:1.18.8'
     annotationProcessor 'org.projectlombok:lombok:1.18.8'
+}
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR3"
+    }
 }

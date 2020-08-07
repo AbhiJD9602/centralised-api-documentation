@@ -1,11 +1,11 @@
 package com.example.api;
 
-import com.example.api.client.config.AddSwaggerEurekaClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 
-@AddSwaggerEurekaClient
+@EnableEurekaClient
 @SpringBootApplication
 public class PersonApplication {
 

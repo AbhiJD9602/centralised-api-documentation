@@ -1,7 +1,6 @@
 package com.example.api.client.config;
 
 import com.example.api.utility.Constants;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
@@ -12,7 +11,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @PropertySource("classpath:enable-swagger-eureka-client.properties")
 @Import({CorsSecurityConfiguration.class})
 @EnableSwagger2
-@EnableEurekaClient
 @Configuration
 public class EnableEurekaClientConfig {
 }

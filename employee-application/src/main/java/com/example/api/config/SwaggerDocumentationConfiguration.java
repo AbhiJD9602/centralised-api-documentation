@@ -16,7 +16,7 @@ public class SwaggerDocumentationConfiguration {
 
 
     ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Person REST CRUD operations API in Spring-Boot 2")
+        return new ApiInfoBuilder().title("Employee REST CRUD operations API in Spring-Boot 2")
                 .description(
                         "Sample REST API for centralized documentation using Spring Boot and spring-fox swagger 2 ")
                 .termsOfServiceUrl("").version("0.0.1-SNAPSHOT").contact(new Contact("Team Innovators", "https://github.com", "https://github.com")).build();

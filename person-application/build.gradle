@@ -42,8 +42,8 @@ asciidoctor {
             "stylesheet": "themes/riak.css"
     inputs.dir snippetsDir
     dependsOn test
-    sourceDir "src/main/asciidoc"
-    outputDir "build/docs"
+    sourceDir "src/main/asciidoc" //template
+    outputDir "src/main/docs"
 }
 dependencyManagement {
     imports {

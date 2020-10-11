@@ -52,7 +52,7 @@ Inside `centralised-api-documentation` root folder, run the following `Gradle` c
 +
 [source]
 ----
-./gradlew :personn-application:bootRun
+./gradlew :person-application:bootRun
 ----
 
 == Applications URLs

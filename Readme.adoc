@@ -71,3 +71,18 @@ Inside `centralised-api-documentation` root folder, run the following `Gradle` c
 
 |===
 
+== Images
+
+* *Eureka Web UI*
+
+image::images/eurekawebui.png[]
+
+* *employee-application swagger dashboard*
+
+image::images/employee_image.png[]
+
+* *person-application swagger dashboard*
+
+image::images/person_image.png[]
+
+|===

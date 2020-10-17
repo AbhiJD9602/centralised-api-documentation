@@ -85,4 +85,41 @@ image::images/employee_image.png[]
 
 image::images/person_image.png[]
 
-|===
+== Spring Rest Docs
+
+This is another flavor of api documentation.
+This generates documentation for RESTful services that is both accurate and readable.
+It providing guarantees that the documentation is up to date (TDD)
+
+The Spring Rest Docs project uses ASCIIDoctor, Junit Test and is compatible with both Maven and Gradle.
+
+Spring Rest Docs are implemented in `person-application`.
+
+For implementation `asciidoctor` plugin needed to be added in `build.gradle`.
+Also `spring-restdocs-mockmvc` along with `junit` and `spring-boot-starter-test` dependencies needed to be added to `build.gradle`.
+
+Junit test cases needs to be written and a asciidoctor template need to be added which will be used to generate Spring Rest Docs.
+
+
+
+== Generating Documentation with Gradle
+
+* *person-application*
++
+First run junit test cases.
++
+[source]
+----
+./gradlew :person-application:test
+----
+Now run `asciidoctor` task.
++
+[source]
+----
+./gradlew :person-application:asciidoctor
+----
+
+This command will generate spring rest documentation html file form `.adoc` template in `person-application/docs/html5` directory.
+
+image::images/spring_rest_docs.png[]
+

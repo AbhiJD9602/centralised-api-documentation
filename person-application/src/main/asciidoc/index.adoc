@@ -1,0 +1,181 @@
+= Person Micro Service documentation generated using Spring REST Docs.
+
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: bottom
+:toclevels: 4
+:sectlinks:
+:sectnums:
+
+[[overview]]
+= Overview
+
+[[overview-http-verbs]]
+== HTTP verbs
+
+RESTful notes tries to adhere as closely as possible to standard HTTP and REST conventions in its use of HTTP verbs.
+
+|===
+| Verb | Usage
+
+| `GET`
+| Used to retrieve a resource
+
+| `POST`
+| Used to create a new resource
+
+| `PATCH`
+| Used to update an existing resource
+
+| `DELETE`
+| Used to delete an existing resource
+|===
+
+[[overview-http-status-codes]]
+== HTTP Status Codes
+
+RESTful notes tries to adhere as closely as possible to standard HTTP and REST conventions in its
+use of HTTP status codes.
+
+|===
+| Status code | Usage
+
+| `200 OK`
+| The request completed successfully
+
+| `201 Created`
+| A new resource has been created successfully. The resource's URI is available from the response's
+`Location` header
+
+| `204 No Content`
+| An update to an existing resource has been applied successfully
+
+| `400 Bad Request`
+| The request was malformed. The response body will include an error providing further information
+
+| `404 Not Found`
+| The requested resource did not exist
+|===
+
+[[overview-resources]]
+== Resources
+
+=== Get It shouldReturnAllPersons
+
+It will return all persons.
+
+==== Curl Request
+
+include::{snippets}/shouldReturnAllPersons/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldReturnAllPersons/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldReturnAllPersons/http-response.adoc[]
+
+=== Get shouldReturnBadRequest_WhenPersonIdInParamAndBodyOfObjectNotSame
+
+Returns bad request when id in param & body of object are not same.
+
+==== Curl Request
+
+include::{snippets}/shouldReturnBadRequest_WhenPersonIdInParamAndBodyOfObjectNotSame/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldReturnBadRequest_WhenPersonIdInParamAndBodyOfObjectNotSame/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldReturnBadRequest_WhenPersonIdInParamAndBodyOfObjectNotSame/http-response.adoc[]
+
+=== Get shouldReturnNotFound_WhenPersonIdObjectNotFound
+
+Returns not found when person with particular id not found.
+
+==== Curl Request
+
+include::{snippets}/shouldReturnNotFound_WhenPersonIdObjectNotFound/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldReturnNotFound_WhenPersonIdObjectNotFound/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldReturnNotFound_WhenPersonIdObjectNotFound/http-response.adoc[]
+
+=== Get shouldReturnPersonDetails_WhenIdForThatPersonIsPassed
+
+Returns person details when id for particular person found.
+
+==== Request Parameters
+
+include::{snippets}/shouldReturnPersonDetails_WhenIdForThatPersonIsPassed/request-parameters.adoc[]
+
+==== Curl Request
+
+include::{snippets}/shouldReturnPersonDetails_WhenIdForThatPersonIsPassed/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldReturnPersonDetails_WhenIdForThatPersonIsPassed/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldReturnPersonDetails_WhenIdForThatPersonIsPassed/http-response.adoc[]
+
+=== Get shouldReturnStatusNotFound_WhenIdForThePersonIsPassedNotFound
+
+Returns Status Not Found when person id not found.
+
+==== Curl Request
+
+include::{snippets}/shouldReturnStatusNotFound_WhenIdForThePersonIsPassedNotFound/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldReturnStatusNotFound_WhenIdForThePersonIsPassedNotFound/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldReturnStatusNotFound_WhenIdForThePersonIsPassedNotFound/http-response.adoc[]
+
+=== POST shouldStorePersonDetails_WhenPersonObjectWithDetailsIsPassed
+
+Returns person object which passed in request & got saved in db.
+
+==== Curl Request
+
+include::{snippets}/shouldStorePersonDetails_WhenPersonObjectWithDetailsIsPassed/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldStorePersonDetails_WhenPersonObjectWithDetailsIsPassed/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldStorePersonDetails_WhenPersonObjectWithDetailsIsPassed/http-response.adoc[]
+
+[]
+=== POST shouldUpdatePersonDetails_WhenPersonObjectWithDetailsAndIdIsPassed
+
+Returns person object update the details of person.
+
+==== Curl Request
+
+include::{snippets}/shouldUpdatePersonDetails_WhenPersonObjectWithDetailsAndIdIsPassed/curl-request.adoc[]
+
+==== Http Request
+
+include::{snippets}/shouldUpdatePersonDetails_WhenPersonObjectWithDetailsAndIdIsPassed/http-request.adoc[]
+
+==== Http Response
+
+include::{snippets}/shouldUpdatePersonDetails_WhenPersonObjectWithDetailsAndIdIsPassed/http-response.adoc[]
+
+
